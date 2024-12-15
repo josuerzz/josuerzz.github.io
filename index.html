@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm in love ♥️</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+    <div class="envelope">
+        <div class="back"></div>
+        <div class="letter">
+            <div class="heart" id="heart"></div>       
+            <div class="text">
+                <p>
+                    Hola mi vida, <br />
+                    hay muchas cosas que quisiera decirte, <br />
+                    reconozco que esto no es y no será jamás suficiente <br />
+                    Te amo, esto es para ti<3
+                </p>
+            </div>
+        </div>
+        <div class="front"></div>
+        <div class="top"></div>
+        <div class="shadow"></div>
+        <div class="text1">
+            <h2>Para mi prometida ♥️</h2>
+        </div>
+    </div>
+
+    <!-- Botón debajo de la carta -->
+    <div id="btnFollow" style="display: none;">
+        <button onclick="window.location.href='message.html'">
+            Sígueme, my love
+        </button>
+    </div>
+
+    <script>
+        // Al hacer clic en la carta, alternamos la clase 'open' que cambiará el fondo y abrirá la carta
+        document.querySelector('.envelope').addEventListener('click', function() {
+            // Alternamos la clase 'open' en el body para cambiar el fondo
+            document.body.classList.toggle('open');
+            
+            // También alternamos la carta para abrirla
+            this.classList.toggle('open');
+
+            document.querySelector('#btnFollow').classList.toggle('see')
+            document.querySelector('.text1').classList.toggle('Notsee')
+
+        });
+
+    </script>
+    
+</body>
+</html>
